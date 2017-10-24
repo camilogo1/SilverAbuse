@@ -1,0 +1,28 @@
+{
+  "name": "silverabuse",
+  "version": "1.0.0",
+  "description": "Groovy, happening and now site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camilogo1/SilverAbuse.git"
+  },
+  "keywords": [
+    "Groovy",
+    "happening",
+    "now",
+    "techy"
+  ],
+  "author": "Camilo A Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camilogo1/SilverAbuse/issues"
+  },
+  "homepage": "https://github.com/camilogo1/SilverAbuse#readme",
+  "devDependencies": {
+    "webpack": "^3.8.1"
+  }
+}
