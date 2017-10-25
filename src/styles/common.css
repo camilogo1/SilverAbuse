@@ -27,7 +27,9 @@
 
 .hello {
     color: red;
-    background: url('../images/SAlogo.svg');
     font-family: 'comfortaa';
 
+}
+body {
+    background: url('../images/SAlogo.svg');
 }
