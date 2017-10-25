@@ -1,11 +1,17 @@
 import _ from 'lodash';
+import './styles/common.css';
+import SAlogo from './images/SAlogo.svg';
 
 function component() {
     var element = document.createElement('div');
 
-    // Lodash, currently included via a script, is required for this line to work
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'Webpacks!', 'wiggles'], ' ');
+    element.innerHTML = _.join(['Beware', 'Silver', 'Abuse'], '! ');
+    element.classList.add('hello');
+    // Add the image to our existing div.
+    var SAlogoImg = new Image();
+    SAlogoImg.src = SAlogo;
+
+    element.appendChild(SAlogoImg);
 
     return element;
 }
