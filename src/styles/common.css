@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'basic_square_7regular';
+    src: url('../fonts/basic_square_7/basic_square_7-webfont.woff2') format('woff2'),
+         url('../fonts/basic_square_7/basic_square_7-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'carr_electronic';
+    src: url('../fonts/carr_electronic/carrelectronicdingbats-webfont.woff2') format('woff2'),
+        url('../fonts/carr_electronic/carrelectronicdingbats-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'comfortaa';
+    src: url('../fonts/comfortaa/comfortaa_thin-webfont.woff2') format('woff2'),
+        url('../fonts/comfortaa/comfortaa_thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.hello {
+    color: red;
+    background: url('../images/SAlogo.svg');
+    font-family: 'comfortaa';
+
+}
