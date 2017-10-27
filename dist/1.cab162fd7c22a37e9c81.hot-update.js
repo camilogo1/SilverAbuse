@@ -1,1 +1,0 @@
-webpackHotUpdate(1,{"./src/print.js":function(e,t,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(){console.log("I get called from print.js!")}}});
