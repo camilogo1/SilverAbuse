@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js -p"
+    "watch": "webpack --progress --watch",
+    "build": "webpack --config webpack.prod.js -p",
+    "start": "webpack-dev-server --open --config webpack.dev.js"
   },
   "repository": {
     "type": "git",
@@ -24,11 +26,15 @@
   },
   "homepage": "https://github.com/camilogo1/SilverAbuse#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.5",
     "html-webpack-plugin": "^2.30.1",
     "style-loader": "^0.19.0",
-    "webpack": "^3.8.1"
+    "uglifyjs-webpack-plugin": "^1.0.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3",
+    "webpack-merge": "^4.1.0"
   },
   "dependencies": {
     "lodash": "^4.17.4"
