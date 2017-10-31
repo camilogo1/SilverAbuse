@@ -6,9 +6,9 @@ const webpack = require('webpack');
 module.exports = {
     entry: {
         print: './src/print.js',
-        app: './src/index.js'
+        app: './src/index.js',
+        vendor: ['./src/math.js']
     },
-    devtool: 'inline-source-map',
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
@@ -19,6 +19,7 @@ module.exports = {
     ],
     output: {
         filename: '[name].bundle.js',
+        chunkFilename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {

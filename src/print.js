@@ -1,3 +1,3 @@
 export default function printMe() {
-  console.log('Updating print.js2200ppp')
+  console.log('Updating print.js2200ppp');
 }
