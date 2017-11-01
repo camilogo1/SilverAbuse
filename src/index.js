@@ -21,9 +21,16 @@ function component() {
     element.appendChild(SAlogoImg);
 
     btn.innerHTML = 'Click me and check the console!';
-    btn.onclick = printMe;
 
     element.appendChild(btn);
+
+    // Note that because a network request is involved, some indication
+    // of loading would need to be shown in a production-level site/app.
+    btn.onclick = e =>
+        import ( /* webpackChunkName: "dynoMod" */ './dynoMod').then(module => {
+            var print = module.default; 
+            print(); 
+        });
 
     return element;
 }
@@ -31,9 +38,9 @@ function component() {
 document.body.appendChild(component());
 console.log('Hello webpack! 5 cubed is equal to ', cube(5));
 
-if (module.hot) {
+/*if (module.hot) {
     module.hot.accept('./print.js', function() {
         console.log('Accepting the updated printMe module!');
         printMe();
     });
-}
+}*/
