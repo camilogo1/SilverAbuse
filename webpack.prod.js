@@ -14,14 +14,10 @@
                  'NODE_ENV': JSON.stringify('production')
              }
          }),
+         new webpack.HashedModuleIdsPlugin(),
          new webpack.optimize.CommonsChunkPlugin({
-             name: "vendor",
-             // filename: "vendor.js"
-             // (Give the chunk a different name)
-
-             minChunks: Infinity,
-             // (with more entries, this ensures that no other module
-             //  goes into the vendor chunk)
+             names: ['vendor', 'app', 'print'],
+             minChunks: Infinity
          })
      ]
  });

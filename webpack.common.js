@@ -7,19 +7,19 @@ module.exports = {
     entry: {
         print: './src/print.js',
         app: './src/index.js',
-        vendor: ['./src/math.js']
+        vendor: ['./src/math.js', 'lodash']
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Output Management',
+            title: 'Caching',
         }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
     ],
     output: {
-        filename: '[name].bundle.js',
-        chunkFilename: '[name].bundle.js',
+        filename: '[name].[hash].bundle.js',
+        chunkFilename: '[name].[chunkhash].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {

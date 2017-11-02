@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/print.js"],"names":["console","log"],"mappings":"2HAAA,WACAA,QAAAC,IAAA","file":"print.bundle.js","sourcesContent":["export default function printMe() {\n  console.log('Updating print.js2200ppp');\n}\n\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/print.js\n// module id = ./src/print.js\n// module chunks = 1 2"],"sourceRoot":""}
