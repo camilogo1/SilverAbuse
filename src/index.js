@@ -4,6 +4,8 @@ import { cube } from './math.js';
 import SAlogo from './images/SAlogo.svg';
 import printMe from './print.js';
 
+//Test
+
 if (process.env.NODE_ENV !== 'production') {
     console.log('Looks like we are in development mode!');
 }

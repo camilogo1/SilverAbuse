@@ -1,4 +1,5 @@
  const webpack = require('webpack');
+ const path = require('path');
  const merge = require('webpack-merge');
  const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
  const common = require('./webpack.common.js');
@@ -15,9 +16,20 @@
              }
          }),
          new webpack.HashedModuleIdsPlugin(),
+         //For proper chunking, CommonsChunkPlugin
+         //must be explicitly instatiated twice.
          new webpack.optimize.CommonsChunkPlugin({
-             names: ['vendor', 'app', 'print'],
+             names: ['vendor'],
+             minChunks: Infinity
+         }),
+         new webpack.optimize.CommonsChunkPlugin({
+             names: ['manifest'],
              minChunks: Infinity
          })
-     ]
+     ],
+    output: {
+        filename: '[name].[chunkhash].js',
+        chunkFilename: '[name].[chunkhash].bundle.js',
+        path: path.resolve(__dirname, 'dist')
+    }
  });
