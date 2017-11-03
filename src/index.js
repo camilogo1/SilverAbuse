@@ -27,7 +27,7 @@ function component() {
     // Note that because a network request is involved, some indication
     // of loading would need to be shown in a production-level site/app.
     btn.onclick = e =>
-        import ( /* webpackChunkName: "dynoMod" */ './dynoMod').then(module => {
+        import ('./dynoMod').then(module => {
             var print = module.default; 
             print(); 
         });
