@@ -5,7 +5,7 @@
  const common = require('./webpack.common.js');
 
  module.exports = merge(common, {
-     devtool: 'source-map',
+     //devtool: 'source-map',
      plugins: [
          new UglifyJSPlugin({
              sourceMap: true
@@ -17,7 +17,8 @@
          }),
          new webpack.HashedModuleIdsPlugin(),
          //For proper chunking, CommonsChunkPlugin
-         //must be explicitly instatiated twice.
+         //must be explicitly instatiated twice,
+         // once with a non-existant module name.
          new webpack.optimize.CommonsChunkPlugin({
              names: ['vendor'],
              minChunks: Infinity
