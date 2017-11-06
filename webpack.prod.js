@@ -3,6 +3,7 @@
  const merge = require('webpack-merge');
  const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
  const common = require('./webpack.common.js');
+ const CompressionPlugin = require("compression-webpack-plugin");
 
  module.exports = merge(common, {
      plugins: [
@@ -25,11 +26,18 @@
          new webpack.optimize.CommonsChunkPlugin({
              names: ['manifest'],
              minChunks: Infinity
+         }),
+         new CompressionPlugin({
+             asset: "[path].gz[query]",
+             algorithm: "gzip",
+             test: /\.js$|\.css$|\.html$/,
+             threshold: 10240,
+             minRatio: 0.8
          })
      ],
-    output: {
-        filename: '[name].[chunkhash].js',
-        chunkFilename: '[name].[chunkhash].bundle.js',
-        path: path.resolve(__dirname, 'dist')
-    }
+     output: {
+         filename: '[name].[chunkhash].js',
+         chunkFilename: '[name].[chunkhash].bundle.js',
+         path: path.resolve(__dirname, 'dist')
+     }
  });

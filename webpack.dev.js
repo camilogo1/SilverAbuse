@@ -3,7 +3,6 @@ const common = require('./webpack.common.js');
 const webpack = require('webpack');
 const path = require('path');
 
-
 module.exports = merge(common, {
     devtool: 'eval-source-map',
     devServer: {
@@ -11,10 +10,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new CompressionPlugin({
-            test: /\.js/
-        })
+        new webpack.HotModuleReplacementPlugin()
     ],
     output: {
         filename: '[name].js',
