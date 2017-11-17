@@ -8,7 +8,7 @@ import NoView from './components/NoView';
 
 const routes = (
     <HashRouter>
-	    <div >
+	    <div className="bounding-box">
 		    <nav className="main_links">
 		    	<ul>
 			        <li><Link to="/">Home</Link></li>

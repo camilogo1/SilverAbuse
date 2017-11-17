@@ -1,9 +1,8 @@
 import './styles/common.css';
 import React from 'react';
 import { render } from 'react-dom';
-import { cube } from './math.js';
-import headImg from './images/homepage.jpg';
-import printMe from './print.js';
+//import { cube } from './math.js';
+//import printMe from './print.js';
 import routes from './routes';
 
 if (process.env.NODE_ENV !== 'production') {

@@ -1,5 +1,5 @@
 const Home = () =>
-        <div id="homebox" className="contentBox">
+        <div id="homebox" className="content-box">
             <h1>About Silver Abuse</h1>
             <p>Silver Abuse was one of the original punk bands in Chicago, 
             forming in 1977. There were various versions of Silver Abuse, 
