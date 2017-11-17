@@ -11,7 +11,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Caching',
+            title: 'Silver Abuse Official'
         })
     ],
     module: {
@@ -23,11 +23,12 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(js|jsx)$/,
+                test: /\.jsx?$/, // Match both .js and .jsx files
                 exclude: /node_modules/,
-                use: [
-                    'babel-loader',
-                ]
+                loader: "babel-loader",
+                query: {
+                    presets: ['react']
+                }
             },
             {
                 test: /\.(png|svg|svgz|jpg|gif)$/,

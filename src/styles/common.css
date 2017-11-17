@@ -1,36 +1,73 @@
+html {
+    font-size: 16px;
+}
+
 @font-face {
     font-family: 'basic_square_7regular';
     src: url('../fonts/basic_square_7/basic_square_7-webfont.woff2') format('woff2'),
-         url('../fonts/basic_square_7/basic_square_7-webfont.woff') format('woff');
+    url('../fonts/basic_square_7/basic_square_7-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'carr_electronic';
     src: url('../fonts/carr_electronic/carrelectronicdingbats-webfont.woff2') format('woff2'),
-        url('../fonts/carr_electronic/carrelectronicdingbats-webfont.woff') format('woff');
+    url('../fonts/carr_electronic/carrelectronicdingbats-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'comfortaa';
     src: url('../fonts/comfortaa/comfortaa_thin-webfont.woff2') format('woff2'),
-        url('../fonts/comfortaa/comfortaa_thin-webfont.woff') format('woff');
+    url('../fonts/comfortaa/comfortaa_thin-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 .hello {
     color: red;
     font-family: 'basic_square_7regular';
     font-size: 45px;
-
 }
+
 body {
-    background: url('../images/SAlogo.svg');
+    background-color: #000;
+    margin: 0;
+    font-family: 'Arial';
+    font-size: .8rem;
+    letter-spacing: 0.06rem;
+}
+
+#react-container {
+    background-image: url('../images/homepage.jpg');
+    background-repeat: no-repeat;
+    /*for testing layout 
+    border: .25px solid red;*/
+    color: #E7C3CE;
+    width: 970px;
+    padding-top: 170px;
+    margin: 0 auto;
+}
+
+.contentBox {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+nav.main_links li {
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px;
+}
+
+nav.main_links li a {
+    text-decoration: none;
+    color: #FBA;
+}
+
+h1 {
+    font-family: 'comfortaa';
 }
