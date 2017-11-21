@@ -75,3 +75,7 @@ nav.main_links li a {
 h1 {
     font-family: 'comfortaa';
 }
+
+.active-link {
+    color: red;
+}
