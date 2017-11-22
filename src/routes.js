@@ -1,10 +1,10 @@
 import React from 'react';
 import { HashRouter, Route, Switch, Link } from 'react-router-dom';
-import Home from './components/Home';
-import Music from './components/Music';
-import Press from './components/Press';
-import Games from './components/Games';
-import NoView from './components/NoView';
+import Home from './views/Home';
+import Music from './views/Music';
+import Press from './views/Press';
+import Games from './views/Games';
+import NoView from './views/NoView';
 
 const routes = (
     <HashRouter>

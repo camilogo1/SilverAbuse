@@ -59,6 +59,7 @@ body {
     width: 100%;
     max-width: 50rem;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 nav.main_links li {
