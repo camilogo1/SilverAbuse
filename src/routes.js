@@ -1,9 +1,10 @@
 import React from 'react';
 import { HashRouter, Route, Switch, Link } from 'react-router-dom';
+import AsyncComponent from "./components/AsyncComponent";
 import Home from './views/Home';
-import Music from './views/Music';
-import Press from './views/Press';
-import Games from './views/Games';
+const AsyncMusic = AsyncComponent(() => import("./views/Music"));
+const AsyncPress = AsyncComponent(() => import("./views/Press"));
+const AsyncGames = AsyncComponent(() => import("./views/Games"));
 import NoView from './views/NoView';
 
 const routes = (
@@ -19,9 +20,9 @@ const routes = (
 			</nav>
 	    	<Switch>
 		        <Route path="/" exact component={Home} />
-		        <Route path="/music" component={Music} />
-		        <Route path="/press" component={Press} / >
-		        <Route path="/games" component={Games} />
+				<Route path="/music" component={AsyncMusic} />
+				<Route path="/press" component={AsyncPress} / >
+				<Route path="/games" component={AsyncGames} />
 		        <Route path="*" component={NoView} />
 	        </Switch>
 	    </div>
