@@ -1,6 +1,8 @@
 const Music = () => {
     return (
-        <h1>Music to come.</h1>
+        <div id="homebox" className="content-box">
+            <h1>Music to come.</h1>
+        </div>
     )
 }
 

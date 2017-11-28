@@ -4,8 +4,8 @@ import { Component } from 'react';
 class Press extends Component {
     render() {
         return (
-            <div className="member-list">
-            	<h1>Press to come.</h1>
+            <div id="homebox" className="content-box">
+                <h1>Press to come.</h1>
             </div>
         )    
    }     
