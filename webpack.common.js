@@ -11,7 +11,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Silver Abuse Official'
+            title: 'Silver Abuse Official',
+            template: 'index.html'
         })
     ],
     module: {
