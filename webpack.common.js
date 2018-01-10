@@ -12,7 +12,7 @@ module.exports = {
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             title: 'Silver Abuse Official',
-            template: 'index.html'
+            template: './src/index.html' 
         })
     ],
     module: {

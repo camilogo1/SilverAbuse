@@ -47,7 +47,7 @@ body {
 }
 
 #logo-container,
-#react-container {
+.bounding-box {
     display: grid;
 }
 
@@ -57,6 +57,7 @@ body {
 }
 
 #home-head-image {
+    width: 100%;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
@@ -73,6 +74,8 @@ body {
 
 .bounding-box {
     background-color: #433c39;
+    grid-template-columns: 1fr 8fr;
+    align-items: start;
 }
 
 .content-box,
@@ -85,9 +88,22 @@ nav.main_links ul {
 
 nav.main_links li {
     text-decoration: none;
-    display: inline-block;
-    margin: 8px 20px;
-    font-size: .8rem;
+    display: block;
+    margin: 8px 20px 8px 0;
+    font-size: .97rem;
+}
+
+nav.main_links li:first-child {
+    margin-left: 0;
+}
+
+nav.main_links li a {
+    text-decoration: none;
+    color: #FBA;
+}
+
+nav.main_links ul {
+    margin: 1rem 0 0 1rem;
 }
 
 /* Logo changes to avoid pixellation */
@@ -103,25 +119,19 @@ nav.main_links li {
 
 /* For larger than phone widths */
 
-@media screen and (min-device-width: 720px) {
+@media screen and (max-width: 720px) {
     nav.main_links li {
-        font-size: 1rem;
-        margin: 8px 17px;
+        font-size: .8rem;
+        margin: 8px 22px;
+        display: inline-block;
     }
-}
-
-nav.main_links li:first-child {
-    margin-left: 0;
-}
-
-nav.main_links li a {
-    text-decoration: none;
-    color: #FBA;
-}
-
-nav.main_links ul {
-    margin: .5rem auto 0;
-    padding: 0;
+    .bounding-box {
+        grid-template-columns: 1fr;
+    }
+    nav.main_links ul {
+        padding: 0;
+        margin: 0 auto 0;
+    }
 }
 
 h1 {
