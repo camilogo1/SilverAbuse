@@ -1,0 +1,1 @@
+webpackJsonp([2],{tid6:function(e,t,c){"use strict";Object.defineProperty(t,"__esModule",{value:!0});t.default=(()=>React.createElement("div",{id:"homebox",className:"content-box"},React.createElement("h1",null,"Games to come.")))}});

@@ -46,6 +46,20 @@ body {
     margin: 0 auto;
 }
 
+c:link {
+    color: rgb(100, 100, 209);
+}
+.home__a:visited {
+    color: rgb(250, 150, 250);
+}
+.home__a:hover {
+    color: red;
+    text-decoration: none;
+}
+.home__a:active {
+    color: yellow;
+}
+
 #logo-container,
 .bounding-box {
     display: grid;
